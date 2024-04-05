@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Rocker&display=swap');
+
+body {
+    background-image: url('images/fondo.jpg');
+    background-size: cover;  
+    background-repeat: no-repeat; 
+    text-align: center;  
+    padding: 10px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    color: rgba(193, 1, 252, 0.801);
+    background-color: transparent;
+    padding: 20px 60px;
+    cursor: pointer;
+    font-size: 200%;
+    top: 350px;
+    right: 10%;
+    font-family: 'new Rocker';
+    position: absolute;
+    border-radius: 20px;
+    text-shadow: 
+        -1px -1px 0 #fff,  
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff; 
+        
+}
+#titulo{
+    color: rgba(211, 48, 211, 0.788);
+    font-size: 350%;
+    font-family: 'new Rocker';
+    top: 100px;
+    left: 200px;
+    position: absolute;
+    margin: 0; 
+    padding: 0; 
+    text-shadow: 
+        -1px -1px 0 #fff,  
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff; 
+}
+#logo {
+    display: block;
+    margin: 20px auto;  /* Centrar el logo horizontalmente */
+    max-width: 200px;  /* Ajustar el ancho máximo del logo */
+    height: auto;  /* Mantener la proporción de aspecto */
+}

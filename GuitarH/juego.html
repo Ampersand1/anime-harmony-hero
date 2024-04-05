@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTAUカバー ＋ UST</title>
+    <link rel="stylesheet" href="css/juego.css">
+    <link rel="icon" href="css/images/logo.png" type="image/png">
+</head>
+
+<body>
+    <div id="general">
+        <!--botones-->
+        <button id="botonMusica">PLAY</button>
+        <button id="pause">PAUSE</button> 
+        <button id="r1">REINICIAR</button>
+        <!--sonido-->
+        <audio id="sound1" src="sonidos/1.mp3"></audio>
+        <audio id="sound2" src="sonidos/2.mp3"></audio>
+        <audio id="sound3" src="sonidos/3.mp3"></audio>
+        <audio id="sound4" src="sonidos/4.mp3"></audio>
+        <audio loop id="musicaFondo">
+            <source src="sonidos/fondo.mp3" type="audio/mp3">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+        <!--video-->
+        <video muted loop id="videoFondo">
+            <source src="videos/video.mp4" type="video/mp4">
+            Tu navegador no soporta el elemento de video.
+        </video>
+        <!--imagen perder-->
+        <div id="pantallaPerdida">
+            <!--texto-->
+            <div>
+                <h1 id="textoPerder">PERDISTE</h1>
+                <table>
+                    <tbody id="lost"><h2 id="losted">Errores:</h2> 
+                    </tbody>
+                    <tbody id="score"><h2 id="scored">Puntaje:</h2>
+                    </tbody>
+                </table></div>
+            <!--boton-->
+            <button id="r2">REINTENTAR</button>
+        </div>
+        <!--imagen final-->
+        <div id="pantallaFinal">
+            <!--texto-->
+            <div>
+                <h1 id="textoPerderF">SE ACABO EL TIEMPO</h1>
+                <table>
+                    <tbody id="lostF"><h2 id="losted">Errores:</h2> 
+                    </tbody>
+                    <tbody id="scoreF"><h2 id="scored">Puntaje:</h2>
+                    </tbody>
+                </table></div>
+            <!--boton-->
+            <button id="r3">REINICIAR</button>
+        </div>
+        <!--tablas-->
+        <div id="tabla-puntajes">
+            <h2 id="tituloPuntaje">SCORE</h2>
+            <table>
+                <tbody id="puntaje">
+                </tbody>
+            </table>
+        </div>
+        <div id="missed">
+            <h2>MISSED</h2>
+            <table>
+                <tbody id="puntosPerdidos">
+                </tbody>
+            </table>
+        </div>
+        <!--componentes juego-->
+        <div id="game-container">
+            <div class="note" id="note1"></div>
+            <div class="note" id="note2"></div>
+            <div class="note" id="note3"></div>
+            <div class="note" id="note4"></div>
+            <div class="noteMove" id="noteM1"></div>
+            <div class="noteMove" id="noteM2"></div>
+            <div class="noteMove" id="noteM3"></div>
+            <div class="noteMove" id="noteM4"></div>
+            <div class="guitar-hero"></div>
+        </div>
+
+    </div>
+    <script src="js/juego.js"></script>
+</body>
+
+</html>
