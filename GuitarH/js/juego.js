@@ -243,30 +243,37 @@ let tiempoRestante = 148; // Tiempo inicial en segundos
 let temporizador;
 
 document.getElementById("botonMusica").addEventListener("click", function () {
-    start();
-    video.play();
-    musica.volume = 0.5;
-    musica.play();
-    /*detenerSonido();*/
-    empezar = true;
-    startTimer();
+    if(video.paused){
+        start();
+        video.play();
+        musica.volume = 0.5;
+        musica.play();
+        /*detenerSonido();*/
+        empezar = true;
+        startTimer();
+    }
     return empezar;
 });
 //pausar juego
 document.getElementById("pause").addEventListener("click", function () {
-    clearInterval(intervalo);
-    video.pause();
-    musica.pause();
-    empezar = false;
-    if (temporizador) {
-        // Si el temporizador está corriendo, detenerlo
-        clearTimeout(temporizador);
-        temporizador = null;
-    } else {
-        // Si el temporizador no está corriendo, iniciar/reanudarlo
-        startTimer();
+    if(video.paused){
+
+    }else{
+        clearInterval(intervalo);
+        video.pause();
+        musica.pause();
+        empezar = false;
+        if (temporizador) {
+            // Si el temporizador está corriendo, detenerlo
+            clearTimeout(temporizador);
+            temporizador = null;
+        } else {
+            // Si el temporizador no está corriendo, iniciar/reanudarlo
+            startTimer();
+        }
+        empezar = false;
+
     }
-    empezar = false;
     return empezar;
 });
 //
